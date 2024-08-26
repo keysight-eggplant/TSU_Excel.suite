@@ -1,0 +1,8 @@
+﻿2024-08-26 15:34:07.341 -0400	START		Running StatusQuo.script
+2024-08-26 15:34:07.373 -0400	LogSuccess		Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)	4	on_statusquo	StatusQuo.script
+2024-08-26 15:34:07.379 -0400	LogSuccess		Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)	9	on_statusquo	StatusQuo.script
+2024-08-26 15:34:07.383 -0400	LogSuccess		Assertion Succeeded:  (assertion: myCurrentRecord.instructor = "Tom Santa"; true: Tom Santa IS equal to Tom Santa)	13	on_statusquo	StatusQuo.script
+2024-08-26 15:34:07.386 -0400	LogSuccess		Assertion Succeeded:  (assertion: myCurrentRecord.instructor = "Tom Santa"; true: Tom Santa IS equal to Tom Santa)	17	on_statusquo	StatusQuo.script
+2024-08-26 15:34:07.459 -0400	LogError		The record count is incorrect	41	on_statusquo	StatusQuo.script
+2024-08-26 15:34:07.475 -0400	EndTestCase		(Duration:"0.13", Errors:"1", Exceptions:"0", StartTime:"2024-08-26 15:34:07 -0400", Successes:"4", TestCase:"StatusQuo.script", Warnings:"0")
+2024-08-26 15:34:07.493 -0400	FAILURE		Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 StatusQuo.script

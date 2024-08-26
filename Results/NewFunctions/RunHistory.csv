@@ -1,0 +1,22 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2024-08-26 15:36:04.344 -0400,"Failure",0:00:00,1,0,0,"20240826_153604.344/LogFile.txt","","Script Error -- Number of Errors logged: 1",0
+2024-08-26 15:37:04.642 -0400,"Aborted",0:00:10,1,0,0,"20240826_153704.642/LogFile.txt","","",0
+2024-08-26 15:39:34.998 -0400,"Aborted",0:00:10,1,0,0,"20240826_153934.998/LogFile.txt","","",0
+2024-08-26 15:40:40.782 -0400,"Aborted",0:00:16,1,0,0,"20240826_154040.782/LogFile.txt","","",0
+2024-08-26 15:41:15.325 -0400,"Aborted",0:00:44,1,0,0,"20240826_154115.325/LogFile.txt","","",0
+2024-08-26 15:42:16.766 -0400,"Aborted",0:00:05,1,0,0,"20240826_154216.766/LogFile.txt","","",0
+2024-08-26 15:43:32.617 -0400,"Aborted",0:01:04,1,0,0,"20240826_154332.617/LogFile.txt","","",0
+2024-08-26 15:51:42.163 -0400,"Aborted",0:00:12,1,0,0,"20240826_155142.163/LogFile.txt","","",0
+2024-08-26 15:54:21.249 -0400,"Success",0:00:00,0,0,0,"20240826_155421.249/LogFile.txt","","",1
+2024-08-26 15:55:59.619 -0400,"Aborted",0:00:04,1,0,0,"20240826_155559.619/LogFile.txt","","",1
+2024-08-26 15:57:50.770 -0400,"Failure",0:00:00,1,0,0,"20240826_155750.770/LogFile.txt","","Script Error -- Number of Errors logged: 1",1
+2024-08-26 15:58:53.993 -0400,"Failure",0:00:00,1,0,0,"20240826_155853.993/LogFile.txt","","Script Error -- Number of Errors logged: 1",2
+2024-08-26 15:59:36.015 -0400,"Failure",0:00:00,1,0,0,"20240826_155936.015/LogFile.txt","","SenseTalk Compiler Exception -- in newfunctions:\nSyntax Error at line 23: can't understand ""record"" at character 11",0
+2024-08-26 15:59:51.321 -0400,"Failure",0:00:00,1,0,0,"20240826_155951.321/LogFile.txt","","SenseTalk Compiler Exception -- in newfunctions:\nSyntax Error at line 23: can't understand ""fourth"" at character 11",0
+2024-08-26 16:00:05.679 -0400,"Failure",0:00:00,1,0,0,"20240826_160005.679/LogFile.txt","","SenseTalk Compiler Exception -- in newfunctions:\nSyntax Error at line 23: can't understand ""4ourth"" at character 9 (an identifier can't start with a digit, and ""ourth"" is not a unit name)",0
+2024-08-26 16:01:16.296 -0400,"Failure",0:00:00,1,0,0,"20240826_160116.296/LogFile.txt","","SenseTalk Compiler Exception -- in newfunctions:\nSyntax Error at line 23: can't understand ""record"" at character 16",0
+2024-08-26 16:01:28.095 -0400,"Failure",0:00:00,1,0,0,"20240826_160128.095/LogFile.txt","","Script Error -- Number of Errors logged: 1",2
+2024-08-26 16:01:39.081 -0400,"Failure",0:00:00,1,0,0,"20240826_160139.081/LogFile.txt","","SenseTalk Compiler Exception -- in newfunctions:\nSyntax Error at line 23: can't understand ""record"" at character 15",0
+2024-08-26 16:03:06.739 -0400,"Failure",0:00:00,1,0,0,"20240826_160306.739/LogFile.txt","","Script Error -- Number of Errors logged: 1",2
+2024-08-26 16:08:49.245 -0400,"Aborted",0:00:23,2,0,0,"20240826_160849.245/LogFile.txt","","",2
+2024-08-26 16:12:11.861 -0400,"Aborted",0:00:49,2,0,0,"20240826_161211.861/LogFile.txt","","",2

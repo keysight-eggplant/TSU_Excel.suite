@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="NewFunctions_script" package="TSU_Excel.suite" timestamp="2024-08-26 15:36:04.344 -0400"
+ tests="1"  failures="2" errors="0" time="0.046000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 15:36:04.344 -0400"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="NewFunctions.script" assertions="1" status="failure"  time="0.039">
+    <failure type="LogError" message="The record count is incorrect" />
+    <failure type="FAILURE" message="Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 NewFunctions.script" />
+  </testcase>
+ </testsuite>
+</testsuites>

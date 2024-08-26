@@ -1,0 +1,3 @@
+﻿2024-08-26 15:43:32.619 -0400	START		Running NewFunctions.script
+2024-08-26 15:44:36.940 -0400	EndTestCase		(Duration:"64.317", Errors:"1", Exceptions:"0", StartTime:"2024-08-26 15:43:32 -0400", Successes:"0", TestCase:"NewFunctions.script", Warnings:"0")
+2024-08-26 15:44:36.947 -0400	ABORTED		Execution Time 0:01:04 NewFunctions.script

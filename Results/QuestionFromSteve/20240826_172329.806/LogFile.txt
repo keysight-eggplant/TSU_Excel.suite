@@ -1,0 +1,5 @@
+﻿2024-08-26 17:23:29.809 -0400	START		Running QuestionFromSteve.script
+2024-08-26 17:23:30.010 -0400	typetext		a[return]b[return]c	2	on_questionfromsteve	QuestionFromSteve.script
+2024-08-26 17:23:30.802 -0400	typetext		[controlKey]ac	3	on_questionfromsteve	QuestionFromSteve.script
+2024-08-26 17:24:19.518 -0400	EndTestCase		(Duration:"49.704", Errors:"0", Exceptions:"0", StartTime:"2024-08-26 17:23:29 -0400", Successes:"1", TestCase:"QuestionFromSteve.script", Warnings:"0")
+2024-08-26 17:24:19.549 -0400	SUCCESS		Execution Time 0:00:49 QuestionFromSteve.script

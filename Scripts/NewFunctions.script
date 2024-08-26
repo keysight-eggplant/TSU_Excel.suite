@@ -1,0 +1,45 @@
+﻿//Tests basic connection with datasheet beginning on row 3
+set myConnectionString to {type:"excel", file:ResourcePath("Test1.xlsx"),writeable:yes}
+set myTable to table "Not Normalized" of myConnectionString
+put the number of records of myConnectionString
+set myTable.headerRow to 3
+put the number of records of myTable into myRecordCount
+
+if myRecordCount = 8 then
+	LogSuccess "The record count is correct" --expected result
+else
+	LogError "The record count is incorrect"
+end if
+
+//Tests direct record access by primary key
+put the record of myTable where "_pk_" equals 1001  into myCurrentRecord--expects data from row 1
+if myCurrentRecord.instructor = "Tom Santa" then
+	LogSuccess "This is the correct record"
+else
+	LogError "This is NOT the correct record" -- _pk_ is deprecated for table function
+end if
+
+//Tests direct record access by value
+put the record of myTable where "RecNumber" equals 1  into myCurrentRecord--expects data from row 1
+if myCurrentRecord.instructor = "Tom Santa" then
+	LogSuccess "This is the correct record"
+else
+	LogError "This is NOT the correct record"
+end if
+//Results: values of 1 were in the status column of the spreadsheet - PASS
+
+//Test writing directly to the Excel file
+put 1 into myCounter
+repeat while myCounter <= myRecordCount
+	put the record of myTable where "RecNumber" equals myCounter  into myCurrentRecord--expects data from row 1
+	put 1 into myCurrentRecord.Status
+	put myCounter+1 into myCounter
+end repeat
+
+//Test writing directly to the Excel file
+put the records of myTable into myRecords
+Repeat with each item myCurrentRecord of myRecords by reference
+	put 2 into myCurrentRecord.Status
+End Repeat
+//Results: values of 2 were in the status column of the spreadsheet - PASS
+

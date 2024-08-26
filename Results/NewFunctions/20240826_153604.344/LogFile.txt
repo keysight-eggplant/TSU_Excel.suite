@@ -1,0 +1,4 @@
+﻿2024-08-26 15:36:04.347 -0400	START		Running NewFunctions.script
+2024-08-26 15:36:04.376 -0400	LogError		The record count is incorrect	7	on_newfunctions	NewFunctions.script
+2024-08-26 15:36:04.391 -0400	EndTestCase		(Duration:"0.039", Errors:"1", Exceptions:"0", StartTime:"2024-08-26 15:36:04 -0400", Successes:"0", TestCase:"NewFunctions.script", Warnings:"0")
+2024-08-26 15:36:04.420 -0400	FAILURE		Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 NewFunctions.script

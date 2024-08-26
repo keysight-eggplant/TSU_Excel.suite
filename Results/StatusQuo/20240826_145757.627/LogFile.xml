@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="StatusQuo_script" package="TSU_Excel.suite" timestamp="2024-08-26 14:57:57.627 -0400"
+ tests="1"  failures="1" errors="0" time="0.053000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 14:57:57.627 -0400"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="StatusQuo.script" assertions="1" status="failure"  time="0.046">
+    <failure type="FAILURE" message="STDatabaseError: Where clause specifies invalid column name &apos;class&apos; (no such column) -- Execution Time 0:00:00 StatusQuo.script" />
+  </testcase>
+ </testsuite>
+</testsuites>

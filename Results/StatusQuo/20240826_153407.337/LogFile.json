@@ -1,0 +1,60 @@
+{
+	"entries": [
+		{
+				"message": "Running StatusQuo.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 15:34:07.341 -0400"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:34:07.373 -0400",
+				"message": "Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 4,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:34:07.379 -0400",
+				"message": "Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 9,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:34:07.383 -0400",
+				"message": "Assertion Succeeded:  (assertion: myCurrentRecord.instructor = \"Tom Santa\"; true: Tom Santa IS equal to Tom Santa)",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 13,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:34:07.386 -0400",
+				"message": "Assertion Succeeded:  (assertion: myCurrentRecord.instructor = \"Tom Santa\"; true: Tom Santa IS equal to Tom Santa)",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 17,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:34:07.459 -0400",
+				"message": "The record count is incorrect",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 41,
+				"identifier": "LogError"
+			},
+		{
+				"message": "(Duration:\"0.13\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 15:34:07 -0400\", Successes:\"4\", TestCase:\"StatusQuo.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 15:34:07.475 -0400"
+			},
+		{
+				"message": "Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 StatusQuo.script",
+				"identifier": "FAILURE",
+				"timestamp": "2024-08-26 15:34:07.493 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 15:34:07.344 -0400"
+}

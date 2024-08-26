@@ -1,0 +1,20 @@
+{
+	"entries": [
+		{
+				"message": "Running NewFunctions.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 15:51:42.166 -0400"
+			},
+		{
+				"message": "(Duration:\"12.38\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 15:51:42 -0400\", Successes:\"0\", TestCase:\"NewFunctions.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 15:51:54.550 -0400"
+			},
+		{
+				"message": "Execution Time 0:00:12 NewFunctions.script",
+				"identifier": "ABORTED",
+				"timestamp": "2024-08-26 15:51:54.557 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 15:51:42.170 -0400"
+}

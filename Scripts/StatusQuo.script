@@ -1,0 +1,43 @@
+﻿//Tests basic connection
+set myConnectionString to {type:"excel", file:ResourcePath("Test1.xlsx")}
+put the number of records of myConnectionString into myRecordCount
+assert myRecordCount = 8
+
+//Tests basic connection with sheet name
+set myConnectionString to {type:"excel", file:ResourcePath("Test1.xlsx"), name:"Normalized",writeable:yes}
+put the number of records of myConnectionString into myRecordCount
+assert myRecordCount = 8
+
+//Tests direct record access by field name
+put the record of myConnectionString where "Requirement" equals "Basic Course"  into myCurrentRecord--expects data from row 1
+assert myCurrentRecord.instructor = "Tom Santa"
+
+//Tests direct record access by primary key
+put the record of myConnectionString where "_pk_" equals 1001  into myCurrentRecord--expects data from row 1
+assert myCurrentRecord.instructor = "Tom Santa"
+
+//Test writing directly to the Excel file
+put 1 into myCounter
+Repeat while myCounter <= myRecordCount
+	set myCurrentRecord to the record of myConnectionString where "_pk_" equals (1000 + myCounter)
+	put 1 into myCurrentRecord.Status
+	put myCounter+1 into myCounter
+End Repeat
+//Results: values of 1 were in the status column of the spreadsheet - PASS
+
+//Test writing directly to the Excel file
+put the records of myConnectionString into myRecords
+Repeat with each item myCurrentRecord of myRecords by reference
+	put 2 into myCurrentRecord.Status
+End Repeat
+//Results: values of 2 were in the status column of the spreadsheet - PASS
+
+//Tests basic connection with datasheet beginning on row 3
+set myConnectionString to {type:"excel", file:ResourcePath("Test1.xlsx"), name:"Not Normalized"}
+put the number of records of myConnectionString into myRecordCount
+if myRecordCount = 8 then
+	LogSuccess "The record count is correct"
+else
+	LogError "The record count is incorrect" --expected result
+end if
+

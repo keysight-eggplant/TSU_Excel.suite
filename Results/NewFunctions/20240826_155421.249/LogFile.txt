@@ -1,0 +1,4 @@
+﻿2024-08-26 15:54:21.252 -0400	START		Running NewFunctions.script
+2024-08-26 15:54:21.303 -0400	LogSuccess		The record count is correct	11	on_newfunctions	NewFunctions.script
+2024-08-26 15:54:21.317 -0400	EndTestCase		(Duration:"0.061", Errors:"0", Exceptions:"0", StartTime:"2024-08-26 15:54:21 -0400", Successes:"1", TestCase:"NewFunctions.script", Warnings:"0")
+2024-08-26 15:54:21.339 -0400	SUCCESS		Execution Time 0:00:00 NewFunctions.script

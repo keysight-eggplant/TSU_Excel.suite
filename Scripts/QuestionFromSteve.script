@@ -1,0 +1,11 @@
+﻿set test_var to  "a"&return&"b"&return&"c"
+typeText test_var
+typetext controlKey,"a","c"
+Put RemoteClipboard() into Clip_Text
+put test_var into Test_Clip
+## Expect Clip_Text and Test_Clip to be the same
+if  Clip_Text is equal to Test_Clip then
+	put "The strings are equal."
+else
+	put "The strings are not equal."
+end if

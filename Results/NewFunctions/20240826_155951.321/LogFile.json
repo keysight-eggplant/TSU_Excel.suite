@@ -1,0 +1,20 @@
+{
+	"entries": [
+		{
+				"message": "Running NewFunctions.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 15:59:51.324 -0400"
+			},
+		{
+				"message": "(Duration:\"0.001\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 15:59:51 -0400\", Successes:\"0\", TestCase:\"NewFunctions.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 15:59:51.330 -0400"
+			},
+		{
+				"message": "SenseTalk Compiler Exception: in newfunctions:\\nSyntax Error at line 23: can't understand \"fourth\" at character 11 -- Execution Time 0:00:00 NewFunctions.script",
+				"identifier": "FAILURE",
+				"timestamp": "2024-08-26 15:59:51.358 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 15:59:51.328 -0400"
+}

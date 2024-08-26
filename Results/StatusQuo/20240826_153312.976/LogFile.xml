@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="StatusQuo_script" package="TSU_Excel.suite" timestamp="2024-08-26 15:33:12.976 -0400"
+ tests="1"  failures="2" errors="0" time="0.140000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 15:33:12.976 -0400"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="StatusQuo.script" assertions="5" status="failure"  time="0.133">
+    <failure type="LogError" message="The record count is incorrect" />
+    <failure type="FAILURE" message="Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 StatusQuo.script" />
+  </testcase>
+ </testsuite>
+</testsuites>

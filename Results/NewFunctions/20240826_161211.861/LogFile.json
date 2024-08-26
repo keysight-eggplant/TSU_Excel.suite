@@ -1,0 +1,44 @@
+{
+	"entries": [
+		{
+				"message": "Running NewFunctions.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 16:12:11.864 -0400"
+			},
+		{
+				"handlerName": "on_newfunctions",
+				"timestamp": "2024-08-26 16:12:11.922 -0400",
+				"message": "The record count is correct",
+				"scriptName": "NewFunctions.script",
+				"handlerLine": 9,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_newfunctions",
+				"timestamp": "2024-08-26 16:12:11.932 -0400",
+				"message": "This is NOT the correct record",
+				"scriptName": "NewFunctions.script",
+				"handlerLine": 19,
+				"identifier": "LogError"
+			},
+		{
+				"handlerName": "on_newfunctions",
+				"timestamp": "2024-08-26 16:12:11.936 -0400",
+				"message": "This is the correct record",
+				"scriptName": "NewFunctions.script",
+				"handlerLine": 25,
+				"identifier": "LogSuccess"
+			},
+		{
+				"message": "(Duration:\"49.512\", Errors:\"2\", Exceptions:\"0\", StartTime:\"2024-08-26 16:12:11 -0400\", Successes:\"2\", TestCase:\"NewFunctions.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 16:13:01.381 -0400"
+			},
+		{
+				"message": "Execution Time 0:00:49 NewFunctions.script",
+				"identifier": "ABORTED",
+				"timestamp": "2024-08-26 16:13:01.387 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 16:12:11.868 -0400"
+}

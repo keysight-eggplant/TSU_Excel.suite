@@ -1,0 +1,36 @@
+{
+	"entries": [
+		{
+				"message": "Running QuestionFromSteve.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 17:23:17.936 -0400"
+			},
+		{
+				"handlerName": "on_questionfromsteve",
+				"timestamp": "2024-08-26 17:23:18.135 -0400",
+				"message": "a[return]b[return]c",
+				"scriptName": "QuestionFromSteve.script",
+				"handlerLine": 2,
+				"identifier": "typetext"
+			},
+		{
+				"handlerName": "on_questionfromsteve",
+				"timestamp": "2024-08-26 17:23:18.923 -0400",
+				"message": "[controlKey]ac",
+				"scriptName": "QuestionFromSteve.script",
+				"handlerLine": 3,
+				"identifier": "typetext"
+			},
+		{
+				"message": "(Duration:\"1.301\", Errors:\"0\", Exceptions:\"0\", StartTime:\"2024-08-26 17:23:17 -0400\", Successes:\"1\", TestCase:\"QuestionFromSteve.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 17:23:19.242 -0400"
+			},
+		{
+				"message": "Execution Time 0:00:01 QuestionFromSteve.script",
+				"identifier": "SUCCESS",
+				"timestamp": "2024-08-26 17:23:19.273 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 17:23:17.940 -0400"
+}

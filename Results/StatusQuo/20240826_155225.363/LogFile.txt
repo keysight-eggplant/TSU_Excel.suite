@@ -1,0 +1,7 @@
+﻿2024-08-26 15:52:25.366 -0400	START		Running StatusQuo.script
+2024-08-26 15:52:25.429 -0400	LogSuccess		Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)	4	on_statusquo	StatusQuo.script
+2024-08-26 15:52:25.435 -0400	LogSuccess		Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)	9	on_statusquo	StatusQuo.script
+2024-08-26 15:52:25.439 -0400	LogSuccess		Assertion Succeeded:  (assertion: myCurrentRecord.instructor = "Tom Santa"; true: Tom Santa IS equal to Tom Santa)	13	on_statusquo	StatusQuo.script
+2024-08-26 15:52:25.442 -0400	LogSuccess		Assertion Succeeded:  (assertion: myCurrentRecord.instructor = "Tom Santa"; true: Tom Santa IS equal to Tom Santa)	17	on_statusquo	StatusQuo.script
+2024-08-26 15:52:40.018 -0400	EndTestCase		(Duration:"14.647", Errors:"1", Exceptions:"0", StartTime:"2024-08-26 15:52:25 -0400", Successes:"4", TestCase:"StatusQuo.script", Warnings:"0")
+2024-08-26 15:52:40.024 -0400	ABORTED		Execution Time 0:00:14 StatusQuo.script

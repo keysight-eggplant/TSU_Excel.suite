@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="StatusQuo_script" package="TSU_Excel.suite" timestamp="2024-08-26 15:52:25.363 -0400"
+ tests="1"  failures="0" errors="0" time="14.654000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 15:52:25.363 -0400"/>
+   <property name="Status" value="Aborted"/>
+  </properties>
+  <testcase name="StatusQuo.script" assertions="5" status="failure"  time="14.647">
+    <failure type="FAILURE" message="See main script" />
+  </testcase>
+ </testsuite>
+</testsuites>

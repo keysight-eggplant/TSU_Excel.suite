@@ -1,0 +1,5 @@
+﻿2024-08-26 15:28:32.052 -0400	START		Running StatusQuo.script
+2024-08-26 15:28:32.082 -0400	LogSuccess		Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)	4	on_statusquo	StatusQuo.script
+2024-08-26 15:28:32.088 -0400	LogSuccess		Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)	9	on_statusquo	StatusQuo.script
+2024-08-26 15:28:32.102 -0400	EndTestCase		(Duration:"0.046", Errors:"1", Exceptions:"0", StartTime:"2024-08-26 15:28:32 -0400", Successes:"2", TestCase:"StatusQuo.script", Warnings:"0")
+2024-08-26 15:28:32.120 -0400	FAILURE		AssertionFailed:  (assertion: myCurrentRecord = "Tom Santa"; actually: {_pk_:1001, @"completed?":"Y", @"course date":"2022-11-05 08:00:00 -0400", @"course name":"Lay Servant Ministries", instructor:"Tom Santa", requirement:"Basic Course", status:2} IS NOT equal to Tom Santa) -- Execution Time 0:00:00 StatusQuo.script

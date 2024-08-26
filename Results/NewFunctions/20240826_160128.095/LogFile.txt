@@ -1,0 +1,6 @@
+﻿2024-08-26 16:01:28.099 -0400	START		Running NewFunctions.script
+2024-08-26 16:01:28.138 -0400	LogSuccess		The record count is correct	9	on_newfunctions	NewFunctions.script
+2024-08-26 16:01:28.151 -0400	LogError		This is NOT the correct record	19	on_newfunctions	NewFunctions.script
+2024-08-26 16:01:28.154 -0400	LogSuccess		This is the correct record	25	on_newfunctions	NewFunctions.script
+2024-08-26 16:01:28.168 -0400	EndTestCase		(Duration:"0.064", Errors:"1", Exceptions:"0", StartTime:"2024-08-26 16:01:28 -0400", Successes:"2", TestCase:"NewFunctions.script", Warnings:"0")
+2024-08-26 16:01:28.189 -0400	FAILURE		Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 NewFunctions.script

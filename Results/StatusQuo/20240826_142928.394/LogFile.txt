@@ -1,0 +1,3 @@
+﻿2024-08-26 14:29:28.397 -0400	START		Running StatusQuo.script
+2024-08-26 14:29:28.448 -0400	EndTestCase		(Duration:"0.046", Errors:"0", Exceptions:"0", StartTime:"2024-08-26 14:29:28 -0400", Successes:"1", TestCase:"StatusQuo.script", Warnings:"0")
+2024-08-26 14:29:28.472 -0400	SUCCESS		Execution Time 0:00:00 StatusQuo.script

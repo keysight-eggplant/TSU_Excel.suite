@@ -1,0 +1,36 @@
+{
+	"entries": [
+		{
+				"message": "Running NewFunctions.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 15:57:50.774 -0400"
+			},
+		{
+				"handlerName": "on_newfunctions",
+				"timestamp": "2024-08-26 15:57:50.809 -0400",
+				"message": "The record count is correct",
+				"scriptName": "NewFunctions.script",
+				"handlerLine": 9,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_newfunctions",
+				"timestamp": "2024-08-26 15:57:50.823 -0400",
+				"message": "This is NOT the correct record",
+				"scriptName": "NewFunctions.script",
+				"handlerLine": 19,
+				"identifier": "LogError"
+			},
+		{
+				"message": "(Duration:\"0.057\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 15:57:50 -0400\", Successes:\"1\", TestCase:\"NewFunctions.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 15:57:50.835 -0400"
+			},
+		{
+				"message": "Script Error: Number of Errors logged: 1 -- Execution Time 0:00:00 NewFunctions.script",
+				"identifier": "FAILURE",
+				"timestamp": "2024-08-26 15:57:50.858 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 15:57:50.778 -0400"
+}

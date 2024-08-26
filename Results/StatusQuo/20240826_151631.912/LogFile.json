@@ -1,0 +1,20 @@
+{
+	"entries": [
+		{
+				"message": "Running StatusQuo.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 15:16:31.915 -0400"
+			},
+		{
+				"message": "(Duration:\"14.181\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 15:16:31 -0400\", Successes:\"0\", TestCase:\"StatusQuo.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 15:16:46.100 -0400"
+			},
+		{
+				"message": "Execution Time 0:00:14 StatusQuo.script",
+				"identifier": "ABORTED",
+				"timestamp": "2024-08-26 15:16:46.106 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 15:16:31.918 -0400"
+}

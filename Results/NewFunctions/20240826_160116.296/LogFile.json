@@ -1,0 +1,20 @@
+{
+	"entries": [
+		{
+				"message": "Running NewFunctions.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 16:01:16.300 -0400"
+			},
+		{
+				"message": "(Duration:\"0.001\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 16:01:16 -0400\", Successes:\"0\", TestCase:\"NewFunctions.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 16:01:16.306 -0400"
+			},
+		{
+				"message": "SenseTalk Compiler Exception: in newfunctions:\\nSyntax Error at line 23: can't understand \"record\" at character 16 -- Execution Time 0:00:00 NewFunctions.script",
+				"identifier": "FAILURE",
+				"timestamp": "2024-08-26 16:01:16.337 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 16:01:16.304 -0400"
+}

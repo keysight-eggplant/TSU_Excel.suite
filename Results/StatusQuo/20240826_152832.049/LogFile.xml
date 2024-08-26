@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="StatusQuo_script" package="TSU_Excel.suite" timestamp="2024-08-26 15:28:32.049 -0400"
+ tests="1"  failures="1" errors="0" time="0.052000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 15:28:32.049 -0400"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="StatusQuo.script" assertions="3" status="failure"  time="0.046">
+    <failure type="FAILURE" message="AssertionFailed:  (assertion: myCurrentRecord = &quot;Tom Santa&quot;; actually: {_pk_:1001, @&quot;completed?&quot;:&quot;Y&quot;, @&quot;course date&quot;:&quot;2022-11-05 08:00:00 -0400&quot;, @&quot;course name&quot;:&quot;Lay Servant Ministries&quot;, instructor:&quot;Tom Santa&quot;, requirement:&quot;Basic Course&quot;, status:2} IS NOT equal to Tom Santa) -- Execution Time 0:00:00 StatusQuo.script" />
+  </testcase>
+ </testsuite>
+</testsuites>

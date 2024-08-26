@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="NewFunctions_script" package="TSU_Excel.suite" timestamp="2024-08-26 16:12:11.861 -0400"
+ tests="1"  failures="1" errors="0" time="49.519000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 16:12:11.861 -0400"/>
+   <property name="Status" value="Aborted"/>
+  </properties>
+  <testcase name="NewFunctions.script" assertions="4" status="failure"  time="49.512">
+    <failure type="LogError" message="This is NOT the correct record" />
+  </testcase>
+ </testsuite>
+</testsuites>

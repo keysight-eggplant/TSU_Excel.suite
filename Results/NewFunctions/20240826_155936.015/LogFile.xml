@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="NewFunctions_script" package="TSU_Excel.suite" timestamp="2024-08-26 15:59:36.015 -0400"
+ tests="1"  failures="1" errors="0" time="0.008000">
+  <properties>
+   <property name="RunDate" value="2024-08-26 15:59:36.015 -0400"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="NewFunctions.script" assertions="1" status="failure"  time="0.002">
+    <failure type="FAILURE" message="SenseTalk Compiler Exception: in newfunctions:\nSyntax Error at line 23: can&apos;t understand &quot;record&quot; at character 11 -- Execution Time 0:00:00 NewFunctions.script" />
+  </testcase>
+ </testsuite>
+</testsuites>

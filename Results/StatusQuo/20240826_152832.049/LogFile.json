@@ -1,0 +1,36 @@
+{
+	"entries": [
+		{
+				"message": "Running StatusQuo.script",
+				"identifier": "START",
+				"timestamp": "2024-08-26 15:28:32.052 -0400"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:28:32.082 -0400",
+				"message": "Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 4,
+				"identifier": "LogSuccess"
+			},
+		{
+				"handlerName": "on_statusquo",
+				"timestamp": "2024-08-26 15:28:32.088 -0400",
+				"message": "Assertion Succeeded:  (assertion: myRecordCount = 8; true: 8 IS equal to 8)",
+				"scriptName": "StatusQuo.script",
+				"handlerLine": 9,
+				"identifier": "LogSuccess"
+			},
+		{
+				"message": "(Duration:\"0.046\", Errors:\"1\", Exceptions:\"0\", StartTime:\"2024-08-26 15:28:32 -0400\", Successes:\"2\", TestCase:\"StatusQuo.script\", Warnings:\"0\")",
+				"identifier": "EndTestCase",
+				"timestamp": "2024-08-26 15:28:32.102 -0400"
+			},
+		{
+				"message": "AssertionFailed:  (assertion: myCurrentRecord = \"Tom Santa\"; actually: {_pk_:1001, @\"completed?\":\"Y\", @\"course date\":\"2022-11-05 08:00:00 -0400\", @\"course name\":\"Lay Servant Ministries\", instructor:\"Tom Santa\", requirement:\"Basic Course\", status:2} IS NOT equal to Tom Santa) -- Execution Time 0:00:00 StatusQuo.script",
+				"identifier": "FAILURE",
+				"timestamp": "2024-08-26 15:28:32.120 -0400"
+			}
+	],
+	"createdTimestamp": "2024-08-26 15:28:32.055 -0400"
+}

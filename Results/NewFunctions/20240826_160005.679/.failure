@@ -1,0 +1,1 @@
+2024-08-26 16:00:05.679 -0400,Failure,0:00:00,1,0,0,20240826_160005.679/LogFile.txt,"","SenseTalk Compiler Exception -- in newfunctions:\nSyntax Error at line 23: can't understand ""4ourth"" at character 9 (an identifier can't start with a digit, and ""ourth"" is not a unit name)",0
