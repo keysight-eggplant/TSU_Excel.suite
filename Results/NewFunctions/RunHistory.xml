@@ -257,4 +257,232 @@ Syntax Error at line 23: can&#x27;t understand &quot;record&quot; at character 1
   <ReturnValue></ReturnValue>
   <ErrorMessage></ErrorMessage>
  </run>
+ <run>
+  <RunDate>2024-08-28 13:16:17.261 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.105000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_131617.261/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>WorkbookWriteError -- Error (can&#x27;t open file for writing) saving workbook to file C:/Users/Dave/Documents/TSU_Excel.suite/Resources/Test1.xlsx</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:16:31.794 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.123000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_131631.794/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Script Error -- Number of Errors logged: 1</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:17:16.173 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.112000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_131716.173/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Script Error -- Number of Errors logged: 1</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:17:27.786 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>42.901000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_131727.786/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:22:40.028 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>24.859000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_132240.028/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:23:22.220 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>14.108000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_132322.220/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:27:02.936 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.075000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_132702.936/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>WorkbookWriteError -- Error (can&#x27;t open file for writing) saving workbook to file C:/Users/Dave/Documents/TSU_Excel.suite/Resources/Test1.xlsx</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:27:11.358 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.118000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_132711.358/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Script Error -- Number of Errors logged: 1</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:27:40.560 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.115000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_132740.560/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Script Error -- Number of Errors logged: 1</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:28:53.924 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.131000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_132853.924/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Script Error -- Number of Errors logged: 1</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:35:24.787 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>10.283000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_133524.787/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:36:21.926 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>120.887000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_133621.926/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:38:30.510 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>119.552000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_133830.510/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:44:35.205 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>26.778000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20240828_134435.205/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>STDatabaseError -- Where clause specifies invalid column name &#x27;RecNumber&#x27; (no such column)</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:45:44.484 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.097000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_134544.484/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>STDatabaseError -- Where clause specifies invalid column name &#x27;RecNumber&#x27; (no such column)</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:45:59.861 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.073000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_134559.861/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>STDatabaseError -- Where clause specifies invalid column name &#x27;RecNumber&#x27; (no such column)</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:46:30.593 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.077000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_134630.593/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>STDatabaseError -- Where clause specifies invalid column name &#x27;RecNumber&#x27; (no such column)</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:46:48.646 -0400</RunDate>
+  <Status>Aborted</Status>
+  <Duration>75.514000</Duration>
+  <Errors>2</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_134648.646/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2024-08-28 13:50:24.867 -0400</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.105000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20240828_135024.867/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Script Error -- Number of Errors logged: 1</ErrorMessage>
+ </run>
 </runHistory>

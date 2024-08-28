@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <statistics>
+ <script name="WorkbookCommandsAndFunctions">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>18</NumberOfRuns>
+  <NumberOfFails>5</NumberOfFails>
+  <FirstRun>2024-08-28 13:58:50 -0400</FirstRun>
+  <LastRun>2024-08-28 14:51:24 -0400</LastRun>
+  <TotalTimeOnSuccess>7.019000</TotalTimeOnSuccess>
+ </script>
  <script name="StatusQuo">
   <LastStatus>Failure</LastStatus>
   <NumberOfRuns>21</NumberOfRuns>
@@ -8,6 +16,14 @@
   <LastRun>2024-08-26 15:34:07 -0400</LastRun>
   <TotalTimeOnSuccess>12.185000</TotalTimeOnSuccess>
  </script>
+ <script name="NewFunctions">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>23</NumberOfRuns>
+  <NumberOfFails>22</NumberOfFails>
+  <FirstRun>2024-08-26 15:36:04 -0400</FirstRun>
+  <LastRun>2024-08-28 13:50:24 -0400</LastRun>
+  <TotalTimeOnSuccess>0.067000</TotalTimeOnSuccess>
+ </script>
  <script name="QuestionFromSteve">
   <LastStatus>Success</LastStatus>
   <NumberOfRuns>2</NumberOfRuns>
@@ -15,13 +31,5 @@
   <FirstRun>2024-08-26 17:23:17 -0400</FirstRun>
   <LastRun>2024-08-26 17:23:29 -0400</LastRun>
   <TotalTimeOnSuccess>51.019000</TotalTimeOnSuccess>
- </script>
- <script name="NewFunctions">
-  <LastStatus>Failure</LastStatus>
-  <NumberOfRuns>11</NumberOfRuns>
-  <NumberOfFails>10</NumberOfFails>
-  <FirstRun>2024-08-26 15:36:04 -0400</FirstRun>
-  <LastRun>2024-08-26 16:03:06 -0400</LastRun>
-  <TotalTimeOnSuccess>0.067000</TotalTimeOnSuccess>
  </script>
 </statistics>

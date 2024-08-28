@@ -1,0 +1,45 @@
+﻿//Tests new features of accessing Excel data using workbook function
+set myExcelFile to Workbook(ResourcePath("Test12.xlsx"))
+put "Is this file a workbook?"&&(myExcelFile is a workbook)
+put
+put "The number of worksheets is:"&&myExcelFile.worksheetcount
+put
+put "The worksheet names are:"&&myExcelFile.worksheetnames
+put
+put ["C","E"] into myColumns
+put "The values in these columns:"&&myColumns&&"are"&& myExcelFile.cellRange(columns:myColumns) --expects values for columns C and E - PASS
+put
+put "The values in these rows:[1,3,5] are"&&myExcelFile.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+put
+
+//Tests new features of accessing Excel data using worksheet function
+set myExcelFile to Workbook(ResourcePath("Test12.xlsx"))
+set myNormalizedWorksheet to Worksheet(myExcelFile,"Normalized")
+set myNotNormalizedWorksheet to Worksheet(myExcelFile,"Not Normalized")
+put ["C","E"] into myColumns
+put
+put "The values in these columns:"&&myColumns&&"are"&& myNormalizedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
+put
+put "The values in these columns:"&&myColumns&&"are"&& myNotNormalizedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E including blank rows - PASS
+put
+put "The values in these rows:[1,3,5] are"&&myNormalizedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+put
+put "The values in these rows:[1,3,5] are"&&myNotNormalizedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+
+//Tests adding worksheets to a workbook
+put formattedTime("SSSSSS",now) into myPrimaryKey
+put NewWorksheet(myExcelFile,"New Worksheet"&underscore&myPrimaryKey)
+put
+put "Creating a new blank worksheet as the last tab in the workbook"
+put "The worksheet names are:"&&myExcelFile.worksheetnames
+put
+put "Is myNormalizedWorksheet a worksheet?"&&(myNormalizedWorksheet is a worksheet) --expects true - PASS
+put NewWorksheet(myExcelFile,name:"Copied Worksheet",copyFrom:myNormalizedWorksheet,sequenceNumber:2) -- step FAIL - copyFrom property does not accept a reference to a worksheet
+set myCopiedWorksheet to Worksheet(myExcelFile,"Copied Worksheet")
+put
+put "Creating a new copied worksheet as the second tab in the workbook"
+put "The worksheet names are:"&&myExcelFile.worksheetnames
+put
+put "The values in these columns:"&&myColumns&&"are"&& myCopiedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
+put
+put "The values in these rows:[1,3,5] are"&&myCopiedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
