@@ -1,0 +1,9 @@
+﻿params myHyperlinksExcel
+
+Put myHyperlinksExcel.worksheetnames into myWorksheetNames
+Repeat with each item myCurrentWorksheetName of myWorksheetNames
+	set myCurrentWorksheet to Worksheet(myHyperlinksExcel,myCurrentWorksheetName)
+	Put "The"&&(the number of items of myCurrentWorksheet.hyperlinks)&&"hyperlinks found in the"&&myCurrentWorksheetName&&"worksheet are:"
+	put myCurrentWorksheet.hyperlinks
+	put
+End Repeat

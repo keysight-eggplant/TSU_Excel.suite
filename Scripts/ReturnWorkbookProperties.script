@@ -1,0 +1,15 @@
+﻿params myExcelFile
+
+Put "Tests new features of accessing Excel data using workbook function"
+put "Is this file a workbook?"&&(myExcelFile is a workbook)
+put
+put "The number of worksheets is:"&&myExcelFile.worksheetcount
+put
+put "The worksheet names are:"&&myExcelFile.worksheetnames
+put
+put ["C","E"] into myColumns
+put "The values in these columns:"&&myColumns&&"are"&& myExcelFile.cellRange(columns:myColumns) --expects values for columns C and E - PASS
+put
+put "The values in these rows:[1,3,5] are"&&myExcelFile.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+put
+

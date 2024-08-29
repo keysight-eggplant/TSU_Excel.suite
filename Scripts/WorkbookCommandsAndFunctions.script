@@ -1,32 +1,30 @@
-﻿//Tests new features of accessing Excel data using workbook function
-set myExcelFile to Workbook(ResourcePath("Test12.xlsx"))
-put "Is this file a workbook?"&&(myExcelFile is a workbook)
-put
-put "The number of worksheets is:"&&myExcelFile.worksheetcount
-put
-put "The worksheet names are:"&&myExcelFile.worksheetnames
-put
-put ["C","E"] into myColumns
-put "The values in these columns:"&&myColumns&&"are"&& myExcelFile.cellRange(columns:myColumns) --expects values for columns C and E - PASS
-put
-put "The values in these rows:[1,3,5] are"&&myExcelFile.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
-put
+﻿set myExcelFile to Workbook(ResourcePath("Test12.xlsx"))
+
+//Tests new features of accessing Excel data using workbook function
+put ReturnWorkbookProperties(myExcelFile)
 
 //Tests new features of accessing Excel data using worksheet function
-set myExcelFile to Workbook(ResourcePath("Test12.xlsx"))
 set myNormalizedWorksheet to Worksheet(myExcelFile,"Normalized")
 set myNotNormalizedWorksheet to Worksheet(myExcelFile,"Not Normalized")
-put ["C","E"] into myColumns
-put
-put "The values in these columns:"&&myColumns&&"are"&& myNormalizedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
-put
-put "The values in these columns:"&&myColumns&&"are"&& myNotNormalizedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E including blank rows - PASS
-put
-put "The values in these rows:[1,3,5] are"&&myNormalizedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
-put
-put "The values in these rows:[1,3,5] are"&&myNotNormalizedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+put ReturnWorksheetProperties(myNormalizedWorksheet, myNotNormalizedWorksheet)
+
+
+//Sets Tab Colors for worksheets
+SetTabColors myExcelFile
+
+
+//Returns Tab Colors for worksheets
+ReturnTabColors myExcelFile
+
+set myHyperlinksExcel to Workbook(ResourcePath("PublicAPIs1.xlsx"))
+
+//Lists hyperlinks from Excel
+ReturnHyperlinks myHyperlinksExcel
+
+
 
 //Tests adding worksheets to a workbook
+Put "Tests adding worksheets to a workbook"
 put formattedTime("SSSSSS",now) into myPrimaryKey
 put NewWorksheet(myExcelFile,"New Worksheet"&underscore&myPrimaryKey)
 put

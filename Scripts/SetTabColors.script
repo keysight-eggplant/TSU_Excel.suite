@@ -1,0 +1,21 @@
+﻿params myExcelFile
+
+Put "Sets Tab Colors for worksheets"
+put
+Put myExcelFile.worksheetnames into myWorksheetNames
+Repeat with each item myCurrentWorksheetName of myWorksheetNames
+	set myCurrentWorksheet to Worksheet(myExcelFile,myCurrentWorksheetName)
+	Put "The original tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor -- expects (0,0,0) for no color tabs - FAIL returns (255,0,0)
+	If myCurrentWorksheetName equals ...
+		... "Normalized" :
+			set the tabColor of worksheet(myExcelFile,myCurrentWorksheetName) to green -- expects (0,255,0) for green tabs - FAIL returns (0,254,0)
+		... "Not Normalized" :
+		set the tabColor of worksheet(myExcelFile,myCurrentWorksheetName) to red -- expects (255,0,0) for red tabs - FAIL returns (254,0,0)
+		... Else
+		set the tabColor of worksheet(myExcelFile,myCurrentWorksheetName) to white -- expects (255,255,255) for white tabs - FAIL returns (254,254,254)
+	End if
+	
+	set myCurrentWorksheet to Worksheet(myExcelFile,myCurrentWorksheetName)
+	Put "The new tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor
+	
+End Repeat

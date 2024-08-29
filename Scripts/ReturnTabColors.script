@@ -1,0 +1,11 @@
+params myExcelFile
+
+put the namedColors
+
+-- Lists all available color names
+
+Put myExcelFile.worksheetnames into myWorksheetNames
+Repeat with each item myCurrentWorksheetName of myWorksheetNames
+	set myCurrentWorksheet to Worksheet(myExcelFile,myCurrentWorksheetName)
+	Put "The tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor
+End Repeat
