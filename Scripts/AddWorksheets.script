@@ -1,0 +1,27 @@
+params myExcelFile, myNormalizedWorksheet
+
+put
+Log me.name&&"begins."
+Put "Tests adding worksheets to a workbook"
+put formattedTime("SSSSSS",now) into myPrimaryKey
+put NewWorksheet(myExcelFile,"New Worksheet"&underscore&myPrimaryKey)
+put
+put "Creating a new blank worksheet as the last tab in the workbook"
+put "The worksheet names are:"&&myExcelFile.worksheetnames
+put
+put "Is myNormalizedWorksheet a worksheet?"&&(myNormalizedWorksheet is a worksheet) --expects true - PASS
+try
+	put NewWorksheet(myExcelFile,name:"Copied Worksheet",copyFrom:myNormalizedWorksheet,sequenceNumber:2) -- step FAIL - copyFrom property does not accept a reference to a worksheet
+	set myCopiedWorksheet to Worksheet(myExcelFile,"Copied Worksheet")
+	put
+	put "Creating a new copied worksheet as the second tab in the workbook"
+	put "The worksheet names are:"&&myExcelFile.worksheetnames
+	put
+	put "The values in these columns:"&&myColumns&&"are"&& myCopiedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
+	put
+	put "The values in these rows:[1,3,5] are"&&myCopiedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+	catch
+	LogError "Worksheet could not be copied"
+end try
+put
+Log me.name&&"ends."

@@ -1,0 +1,8 @@
+params mySortingExcel
+
+put mySortingExcel.worksheetnames into myAlphaWorksheetNames
+sort myAlphaWorksheetNames
+repeat with each myCurrentWorksheetName of myAlphaWorksheetNames
+	set myCurrentWorksheet to Worksheet(mySortingExcel,myCurrentWorksheetName)
+	set myCurrentWorksheet.sequenceNumber to the repeatindex
+end repeat

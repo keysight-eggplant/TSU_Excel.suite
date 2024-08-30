@@ -21,32 +21,18 @@ ResetTabColors myExcelFile
 //Sets Tab Colors for worksheets
 SetTabColorsByNumber myExcelFile
 
-
 //Returns Tab Colors for worksheets
 ReturnTabColors myExcelFile
 
-set myHyperlinksExcel to Workbook(ResourcePath("PublicAPIs1.xlsx"))
+//Alphabetizes worksheets by name
+put Workbook(ResourcePath("PublicAPIs1.xlsx")) into mySortingExcel
+AlphabetizeWorksheets mySortingExcel
 
 //Lists hyperlinks from Excel
-ReturnHyperlinks myHyperlinksExcel
-
-
+set myHyperlinksExcels to ["PublicAPIs1.xlsx","MacroFileMatching.xlsx"]
+ReturnHyperlinks myHyperlinksExcels
 
 //Tests adding worksheets to a workbook
-Put "Tests adding worksheets to a workbook"
-put formattedTime("SSSSSS",now) into myPrimaryKey
-put NewWorksheet(myExcelFile,"New Worksheet"&underscore&myPrimaryKey)
-put
-put "Creating a new blank worksheet as the last tab in the workbook"
-put "The worksheet names are:"&&myExcelFile.worksheetnames
-put
-put "Is myNormalizedWorksheet a worksheet?"&&(myNormalizedWorksheet is a worksheet) --expects true - PASS
-put NewWorksheet(myExcelFile,name:"Copied Worksheet",copyFrom:myNormalizedWorksheet,sequenceNumber:2) -- step FAIL - copyFrom property does not accept a reference to a worksheet
-set myCopiedWorksheet to Worksheet(myExcelFile,"Copied Worksheet")
-put
-put "Creating a new copied worksheet as the second tab in the workbook"
-put "The worksheet names are:"&&myExcelFile.worksheetnames
-put
-put "The values in these columns:"&&myColumns&&"are"&& myCopiedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
-put
-put "The values in these rows:[1,3,5] are"&&myCopiedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+AddWorksheets myExcelFile, myNormalizedWorksheet
+
+

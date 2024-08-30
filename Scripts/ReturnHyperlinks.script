@@ -1,14 +1,19 @@
-﻿params myHyperlinksExcel
+﻿params myHyperlinksExcels
 
 put
 log me.name&&"begins."
 
-Put myHyperlinksExcel.worksheetnames into myWorksheetNames
-Repeat with each item myCurrentWorksheetName of myWorksheetNames
-	set myCurrentWorksheet to Worksheet(myHyperlinksExcel,myCurrentWorksheetName)
-	Put "The"&&(the number of items of myCurrentWorksheet.hyperlinks)&&"hyperlinks found in the"&&myCurrentWorksheetName&&"worksheet are:"
-	put myCurrentWorksheet.hyperlinks
-	put
-End Repeat
+repeat with each item myCurrentFile of myHyperlinksExcels
+	Put Workbook(ResourcePath(myCurrentFile)).worksheetnames into myWorksheetNames
+	Repeat with each item myCurrentWorksheetName of myWorksheetNames
+		set myCurrentWorksheet to Worksheet(ResourcePath(myCurrentFile),myCurrentWorksheetName)
+		put myCurrentWorksheet.cell(1,1) -- expects value in cell - PASS
+		put myCurrentWorksheet.cell(1,4) -- expects value in cell which contains a hyperlink -- FAIL returns only HTTPS
+		Put "The"&&(the number of items of myCurrentWorksheet.hyperlinks)&&"hyperlinks found in the"&&myCurrentWorksheetName&&"worksheet are:"
+		put myCurrentWorksheet.hyperlinks
+		put
+	End Repeat
+end repeat
+
 
 log me.name&&"ends."
