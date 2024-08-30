@@ -1,5 +1,8 @@
 ﻿params myHyperlinksExcel
 
+put
+log me.name&&"begins."
+
 Put myHyperlinksExcel.worksheetnames into myWorksheetNames
 Repeat with each item myCurrentWorksheetName of myWorksheetNames
 	set myCurrentWorksheet to Worksheet(myHyperlinksExcel,myCurrentWorksheetName)
@@ -7,3 +10,5 @@ Repeat with each item myCurrentWorksheetName of myWorksheetNames
 	put myCurrentWorksheet.hyperlinks
 	put
 End Repeat
+
+log me.name&&"ends."

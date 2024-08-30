@@ -1,4 +1,7 @@
-params myExcelFile
+﻿params myExcelFile
+
+put
+log me.name&&"begins."
 
 put the namedColors
 
@@ -9,3 +12,5 @@ Repeat with each item myCurrentWorksheetName of myWorksheetNames
 	set myCurrentWorksheet to Worksheet(myExcelFile,myCurrentWorksheetName)
 	Put "The tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor
 End Repeat
+
+log me.name&&"ends."

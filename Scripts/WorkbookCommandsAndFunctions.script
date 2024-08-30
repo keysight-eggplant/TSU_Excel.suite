@@ -9,8 +9,17 @@ set myNotNormalizedWorksheet to Worksheet(myExcelFile,"Not Normalized")
 put ReturnWorksheetProperties(myNormalizedWorksheet, myNotNormalizedWorksheet)
 
 
+//Resets tab colors to no colors
+ResetTabColors myExcelFile
+
 //Sets Tab Colors for worksheets
 SetTabColors myExcelFile
+
+//Resets tab colors to no colors
+ResetTabColors myExcelFile
+
+//Sets Tab Colors for worksheets
+SetTabColorsByNumber myExcelFile
 
 
 //Returns Tab Colors for worksheets

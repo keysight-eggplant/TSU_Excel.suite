@@ -1,4 +1,6 @@
 ﻿//Tests basic connection
+
+log me.name&&"begins."
 set myConnectionString to {type:"excel", file:ResourcePath("Test1.xlsx")}
 put the number of records of myConnectionString into myRecordCount
 assert myRecordCount = 8
@@ -41,3 +43,4 @@ else
 	LogError "The record count is incorrect" --expected result
 end if
 
+log me.name&&"ends."

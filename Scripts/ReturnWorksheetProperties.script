@@ -1,5 +1,8 @@
 ﻿params myNormalizedWorksheet, myNotNormalizedWorksheet
 
+put
+log me.name&&"begins."
+
 Put "Tests new features of accessing Excel data using worksheet function"
 put ["C","E"] into myColumns
 put
@@ -10,4 +13,6 @@ put
 put "The values in these rows:[1,3,5] are"&&myNormalizedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
 put
 put "The values in these rows:[1,3,5] are"&&myNotNormalizedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+
+log me.name&&"ends."
 

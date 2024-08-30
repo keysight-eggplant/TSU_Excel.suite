@@ -1,4 +1,6 @@
 ﻿//Tests basic connection with datasheet beginning on row 3
+log me.name&&"begins."
+
 set myConnectionString to {type:"excel", file:ResourcePath("Test1.xlsx"),writeable:yes}
 set myTable to table "Not Normalized" of myConnectionString
 put the number of records of myConnectionString
@@ -48,4 +50,6 @@ End Repeat
 //Test renaming columns
 put the record of myTable where "Record Number" equals 1  into myCurrentRecord--expects data from row 1
 log the keys of myCurrentRecord--expects new column names - FAIL
+
+log me.name&&"ends."
 
