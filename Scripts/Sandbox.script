@@ -1,15 +1,29 @@
-set myColorsAndPatternsFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
+﻿set myColorsAndPatternsFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 set myWorksheetName to "Canvas"
 set myCanvas to refer to Worksheet(myColorsAndPatternsFile,myWorksheetName)
+set myCell to refer to cell("B3") of myCanvas 
 
 put myColorsAndPatternsFile is a workbook
 put myCanvas is a worksheet
+put myCell is a cell
 
-
-set myCell to refer to cell("B3") of myCanvas 
-assert the fillPattern of myCell is "Solid" -- that seems to be the default
-set myCell's fillPattern to "diagonal  stripe"
-assert the fillPattern of myCell is "DiagonalStripe"
-
+set myCell's fillPattern to "none"
 set myCell's patternForegroundColor to purple
-set myCell's patternBackgroundColor to color("191,191,191")
+set myCell's fillPattern to "diagonalstripe"
+put the patternForegroundColor of myCell
+put the fillPattern of myCell
+
+Pausescript
+//Open the Excel - FAIL - the purple crosshatch is NOT visible
+
+
+set myCell's fillPattern to "none"
+set myCell's patternForegroundColor to white
+set myCell's fillPattern to "diagonalstripe"
+set myCell's patternForegroundColor to purple
+put the patternForegroundColor of myCell
+put the fillPattern of myCell
+
+Pausescript
+//Open the Excel - TRUE - the purple crosshatch is NOT visible
+
