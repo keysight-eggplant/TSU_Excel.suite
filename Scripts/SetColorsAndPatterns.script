@@ -1,0 +1,20 @@
+﻿params myColorsAndPatternsFile, myWorksheetName
+
+-- set myColorsAndPatternsFile to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
+put ("B".."R") as a list into myColumns
+put (3..32) as a list into myRows
+set the patternForegroundColor of cell("B3") of myCanvas to darkgreen
+put the patternForegroundColor of cell("B3")
+repeat with each item myCurrentColumn of myColumns
+	repeat with each item myCurrentRow of myRows
+		put cell(myCurrentColumn&myCurrentRow) of myCanvas into myCurrentCell
+		--put item 1 of (cell(myCanvas,myCurrentCell) split by space) into myColor
+		--put item 2 of (cell(myCanvas,myCurrentCell) split by space) into myPattern
+		put item 1 of (myCurrentCell split by space) into myColor
+		put item 2 of (myCurrentCell split by space) into myPattern
+		try set the patternBackgroundColor of myCurrentCell to myColor
+		try set myCurrentCell.fillPattern to myPattern
+		set the patternForegroundColor of cell(myCurrentColumn&myCurrentRow) of myCanvas to myColor
+		--set the fillPattern of cell(myCurrentColumn&myCurrentRow) of myCanvas to myPattern
+	end repeat
+end repeat
