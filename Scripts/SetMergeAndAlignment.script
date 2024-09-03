@@ -1,0 +1,11 @@
+﻿params myRange,myWorksheet
+
+log me.name&&"has started"
+
+set the fontName of cell(item 1 of myRange) of myWorksheet to "Tahoma"
+set the fontSize of cell(item 1 of myRange) of myWorksheet to 14
+set the fontColor of cell(item 1 of myRange) of myWorksheet to purple
+set the mergeRange of cell(item 1 of myRange) of myWorksheet to myRange
+set the horizontalAlignment of myWorksheet.cell(item 1 of myRange) to "center"
+
+log me.name&&"has started"

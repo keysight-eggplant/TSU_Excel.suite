@@ -39,13 +39,23 @@ AddWorksheets myExcelFile, myNormalizedWorksheet
 set myWorkbookFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 set myWorksheetName to "Canvas"
 set myWorksheet to refer to Worksheet(myWorkbookFile,myWorksheetName)
-SetColorsAndPatterns myWorkbookFile, myWorksheet
+Put SetColorsAndPatterns(myWorkbookFile, myWorksheet) into myNewCanvasWorksheetName
 
+//Tests merging a range and horizontal alignment
+set myWorkbookFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
+set myWorksheet to refer to Worksheet(myWorkbookFile,myNewCanvasWorksheetName)
+put ("A1","R1") as a list into myRange
+SetMergeAndAlignment myRange,myWorksheet
 
 //Tests borders of different colors
 set myWorkbookFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 set myWorksheetName to "Borders"
 set myWorksheet to refer to Worksheet(myWorkbookFile,myWorksheetName)
-SetBorders myWorkbookFile, myWorksheet
+Put SetBorders(myWorkbookFile, myWorksheet) into myNewBordersWorksheetName
 
+//Tests merging a range and horizontal alignment
+set myWorkbookFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
+set myWorksheet to refer to Worksheet(myWorkbookFile,myNewBordersWorksheetName)
+put ("A1","N1") as a list into myRange
+SetMergeAndAlignment myRange,myWorksheet
 

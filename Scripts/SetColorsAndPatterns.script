@@ -1,5 +1,7 @@
 ﻿params myWorkbookFile, myWorksheet
 
+Log me.name && "has started."
+
 -- set myColorsAndPatternsFile to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 put ("B".."R") as a list into myColumns
 put (3..32) as a list into myRows
@@ -22,7 +24,7 @@ end repeat
 
 put formattedTime("SSSSSS",now) into myPrimaryKey
 put "Canvas"&underscore&myPrimaryKey into myNewSheetName
-put NewWorksheet(myWorkbookfile,name:myNewSheetName,copyFrom:worksheet(2) of myWorkbookfile,sequenceNumber:4)
+put NewWorksheet(myWorkbookfile,name:myNewSheetName,copyFrom:worksheet(2) of myWorkbookfile,sequenceNumber:4) into myNewCanvasWorksheet
 
 repeat with each item myCurrentColumn of myColumns
 	repeat with each item myCurrentRow of myRows
@@ -31,3 +33,7 @@ repeat with each item myCurrentColumn of myColumns
 		set the patternForegroundColor of myCurrentCell to "white"
 	end repeat
 end repeat
+
+Return myNewSheetName
+
+Log me.name && "has finished."
