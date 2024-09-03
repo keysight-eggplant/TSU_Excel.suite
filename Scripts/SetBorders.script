@@ -1,0 +1,28 @@
+params myWorkbookFile, myWorksheet
+
+-- set myColorsAndPatternsFile to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
+put ("B".."N") as a list into myColumns
+put (3..32) as a list into myRows
+(*set the patternForegroundColor of cell("B3") of myWorksheet to darkgreen
+put the patternForegroundColor of cell("B3") of myWorksheet*)
+repeat with each item myCurrentColumn of myColumns
+	repeat with each item myCurrentRow of myRows
+		set myCurrentCell to refer to cell(myCurrentColumn&myCurrentRow) of myWorksheet
+		put item 1 of (myCurrentCell split by space) into myColor
+		put item 2 of (myCurrentCell split by space) into myPattern
+		set the borderStyle of myCurrentCell to myPattern
+		set the borderColor of myCurrentCell to myColor
+	end repeat
+end repeat
+
+put formattedTime("SSSSSS",now) into myPrimaryKey
+put "Borders"&underscore&myPrimaryKey into myNewSheetName
+put NewWorksheet(myWorkbookfile,name:myNewSheetName,copyFrom:worksheet(3) of myWorkbookfile,sequenceNumber:4)
+
+repeat with each item myCurrentColumn of myColumns
+	repeat with each item myCurrentRow of myRows
+		set myCurrentCell to refer to cell(myCurrentColumn&myCurrentRow) of myWorksheet
+		set the borderStyle of myCurrentCell to "none"
+		set the borderColor of myCurrentCell to "white"
+	end repeat
+end repeat

@@ -25,5 +25,5 @@ put the patternForegroundColor of myCell
 put the fillPattern of myCell
 
 Pausescript
-//Open the Excel - TRUE - the purple crosshatch is NOT visible
+//Open the Excel - TRUE - the purple crosshatch is visible
 
