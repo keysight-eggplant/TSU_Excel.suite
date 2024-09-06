@@ -9,8 +9,7 @@ Repeat with each item myCurrentWorksheetName of myWorksheetNames
 	set myCurrentWorksheet to Worksheet(myExcelFile,myCurrentWorksheetName)
 	Put "The original tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor -- expects (0,0,0) for no color tabs - FAIL returns (255,0,0)
 	delete the tabColor of worksheet(myExcelFile,myCurrentWorksheetName) -- expects (0,255,0) for green tabs - FAIL returns (0,254,0)
-	
-	set myCurrentWorksheet to Worksheet(myExcelFile,myCurrentWorksheetName)
+	Put "The tab color is being deleted"
 	Put "The new tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor
 	
 End Repeat

@@ -41,11 +41,11 @@
   <TotalTimeOnSuccess>0.072000</TotalTimeOnSuccess>
  </script>
  <script name="WorkbookCommandsAndFunctions">
-  <LastStatus>Failure</LastStatus>
-  <NumberOfRuns>47</NumberOfRuns>
-  <NumberOfFails>34</NumberOfFails>
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>59</NumberOfRuns>
+  <NumberOfFails>45</NumberOfFails>
   <FirstRun>2024-08-28 13:58:50 -0400</FirstRun>
-  <LastRun>2024-09-05 10:08:03 -0400</LastRun>
-  <TotalTimeOnSuccess>7.019000</TotalTimeOnSuccess>
+  <LastRun>2024-09-06 18:39:28 -0400</LastRun>
+  <TotalTimeOnSuccess>665.089000</TotalTimeOnSuccess>
  </script>
 </statistics>

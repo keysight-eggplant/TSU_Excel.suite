@@ -1,0 +1,7 @@
+to handle PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+	put "This is my Excel file:" && myExcelFile
+	put "This is my normalized worksheet:" && myNormalizedWorksheet
+	put "This is my requirement header:" && myRequirementHeader
+	put "These are my column headers:" && myColumnHeaders
+	put
+end PutObjectNames

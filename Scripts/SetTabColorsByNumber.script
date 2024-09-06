@@ -1,5 +1,6 @@
 ﻿params myExcelFile
 
+Log me.name && "begins."
 Put "Sets Tab Colors for worksheets"
 put
 Put myExcelFile.worksheetnames into myWorksheetNames
@@ -19,3 +20,4 @@ Repeat with each item myCurrentWorksheetName of myWorksheetNames
 	Put "The new tab color of"&&myCurrentWorksheetName&&"is"&&myCurrentWorksheet.tabColor
 	
 End Repeat
+Log me.name && "ends."

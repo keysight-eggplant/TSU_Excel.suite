@@ -1,10 +1,73 @@
-﻿params myExcelFile,myNormalizedWorksheet,myRequirementHeader,myColumnHeaders
+﻿params myExcelFile,myNormalizedWorksheet,myRequirementHeader,myColumnHeaders,myCycle
 
-log me.name && "has started."
+put
+log me.name && "cycle" && myCycle && "begins."
 
-put "The workbook" && myExcelFile.fileName && "is a workbook:" && (myExcelFile is a workbook)
-put "The worksheet" && myNormalizedWorksheet.Name && "is a worksheet:" && (myNormalizedWorksheet is a worksheet)
-put myRequirementHeader is a cell
+global myErroredObjectList
+global myCurrentError
 
-set myNotNormalizedWorksheet to refer to Worksheet(myExcelFile,"Not Normalized")
-set the tabColor of myNotNormalizedWorksheet to "blue"
+If myCurrentError ...
+	... is empty :
+		Log "This is the initial object check"
+		CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+		
+		put "The workbook" && myExcelFile.fileName && "is a workbook:" && (myExcelFile is a workbook)
+		Log "This is the object check after myExcelFile is a workbook."
+		CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+		
+		put myNormalizedWorksheet is a worksheet into ynWorksheet
+		Log "This is the object check after myNormalizedWorksheet is a worksheet (version-1)."
+		CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+		
+		
+		put "The worksheet:" && myNormalizedWorksheet && "is a worksheet:" && (myNormalizedWorksheet is a worksheet)
+		Log "This is the object check after myNormalizedWorksheet is a worksheet (version-2)."
+		CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+		
+		try
+			put "The workbook property of this worksheet is" && myNormalizedWorksheet.workbook -- throws an exception when trying to put the workbook property of a worksheet passed as a parameter
+			Log "This is the object check after accessing the workbook property."
+			CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+			if myCurrentError contains "workbook property" then pull myCurrentError into tmpValue
+			insert tmpvalue after myErroredObjectList
+		catch
+			LogWarning "SenseTalk throws an exception when trying to put the workbook property of a worksheet passed as a parameter"
+			Log "Reinstantiating the worksheet object..."
+			put "workbook property" into myCurrentError
+			exit handler
+		end try
+	... equals "workbook property" :
+		pull myCurrentError into tmpValue
+		insert tmpvalue after myErroredObjectList
+		try
+			put "The name property of this worksheet is" && myNormalizedWorksheet.name
+			Log "This is the object check after accessing the workbook property."
+			CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+			assert myNormalizedWorksheet is not empty -- FAIL - accessing the name property clears the object from memory
+		catch
+			LogWarning "SenseTalk throws an exception after trying to put the name property of a worksheet passed as a parameter"
+			LogWarning the exception
+			Log "Reinstantiating the worksheet object..."
+			put "name property" into myCurrentError
+			exit handler
+		end try
+	... equals "name property":
+		pull myCurrentError into tmpValue
+		insert tmpvalue after myErroredObjectList
+		put "The cell type of the cell" && myRequirementHeader && "is" && myRequirementHeader.celltype
+		Log "This is the object check after accessing the cellType property."
+		CommonHandlers.PutObjectNames myExcelFile, myNormalizedWorksheet, myRequirementHeader, myColumnHeaders
+		set the horizontalAlignment of myRequirementHeader to "center"
+		
+	... Else
+		LogWarning "Illegal value"
+		
+End if
+
+
+set global ObjectTestingComplete to TRUE
+Log "My list of errors is"&&myErroredObjectList
+
+log me.name && "has ended."	
+
+

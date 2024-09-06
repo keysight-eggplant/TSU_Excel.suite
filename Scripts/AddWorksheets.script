@@ -1,4 +1,7 @@
-params myExcelFile, myNormalizedWorksheet
+﻿params myExcelFile, myNormalizedWorksheet
+
+global myCurrentError
+global myErroredObjectList
 
 put
 Log me.name&&"begins."
@@ -10,18 +13,39 @@ put "Creating a new blank worksheet as the last tab in the workbook"
 put "The worksheet names are:"&&myExcelFile.worksheetnames
 put
 put "Is myNormalizedWorksheet a worksheet?"&&(myNormalizedWorksheet is a worksheet) --expects true - PASS
-try
-	put NewWorksheet(myExcelFile,name:"Copied Worksheet",copyFrom:myNormalizedWorksheet,sequenceNumber:2) -- step FAIL - copyFrom property does not accept a reference to a worksheet
-	set myCopiedWorksheet to Worksheet(myExcelFile,"Copied Worksheet")
-	put
-	put "Creating a new copied worksheet as the second tab in the workbook"
-	put "The worksheet names are:"&&myExcelFile.worksheetnames
-	put
-	put "The values in these columns:"&&myColumns&&"are"&& myCopiedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
-	put
-	put "The values in these rows:[1,3,5] are"&&myCopiedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
+repeat 2 times
+	try
+		put NewWorksheet(myExcelFile,name:"Copied Worksheet_"&&myPrimaryKey,copyFrom:myNormalizedWorksheet,sequenceNumber:2) -- step FAIL - copyFrom property does not accept a reference to a worksheet
+		set myCopiedWorksheet to Worksheet(myExcelFile,"Copied Worksheet_"&&myPrimaryKey)
+		put
+		put "Creating a new copied worksheet as the second tab in the workbook"
+		put "The worksheet names are:"&&myExcelFile.worksheetnames
+		put
+		put "The values in these columns:"&&myColumns&&"are"&& myCopiedWorksheet.cellRange(columns:myColumns) --expects values for columns C and E - PASS
+		put
+		put "The values in these rows:[1,3,5] are"&&myCopiedWorksheet.cellRange(rows:[1,3,5]) --expects values for columns C and E - PASS
 	catch
-	LogError "Worksheet could not be copied"
-end try
+		LogWarning "Worksheet could not be copied"
+		If myCurrentError equals ...
+			... empty :
+				set myCurrentError to "copy from worksheet as parameter"
+			... "copy from worksheet as parameter" :
+			pull  myCurrentError into tmpValue
+			insert tmpValue into myErroredObjectList
+			set  myCurrentError to "copy from worksheet as local reference"
+			... Else
+			LogWarning "Invalid value"
+			End if
+	end try
+	set myNormalizedWorksheet to refer to Worksheet(myExcelFile,"Normalized")
+	
+end repeat
+
+put NewWorksheet(myExcelFile,name:"Copied Worksheet_"&&myPrimaryKey,copyFrom:Worksheet(myExcelFile,"Normalized"),sequenceNumber:2)
+
+pull myCurrentError into tmpValue
+insert tmpvalue after myErroredObjectList
+
+Log "My list of errors is"&&myErroredObjectList
 put
 Log me.name&&"ends."

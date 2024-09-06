@@ -1,6 +1,7 @@
 params myWorkbookFile, myWorksheet
 
-Log me.name && "has started."
+Log me.name && "begins."
+Log "There are lots of permutations, so this may take a minute. Please be patient."
 
 -- set myColorsAndPatternsFile to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 put ("B".."N") as a list into myColumns
@@ -31,4 +32,4 @@ end repeat
 
 Return myNewSheetName
 
-Log me.name && "has finished."
+Log me.name && "ends."

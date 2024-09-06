@@ -1,4 +1,7 @@
-﻿set myExcelFile to refer to Workbook(ResourcePath("Test12.xlsx"))
+﻿global myErroredObjectList
+global myCurrentError
+
+set myExcelFile to refer to Workbook(ResourcePath("Test12.xlsx"))
 
 //Tests new features of accessing Excel data using workbook function
 put ReturnWorkbookProperties(myExcelFile)
@@ -13,8 +16,24 @@ set myRequirementHeader to refer to myNormalizedWorksheet.Cell("A1")
 put myRequirementHeader
 set myColumnHeaders to refer to myNormalizedWorksheet.CellRange("A1:E1")
 put myColumnHeaders
-ObjectTesting myExcelFile,myNormalizedWorksheet,myRequirementHeader,myColumnHeaders
+put [] into myErroredObjectList
+put "" into myCurrentError
 
+repeat while global ObjectTestingComplete <> TRUE
+	put repeatindex() into myCycle
+	ObjectTesting myExcelFile,myNormalizedWorksheet,myRequirementHeader,myColumnHeaders,myCycle
+	set myExcelFile to refer to Workbook(ResourcePath("Test12.xlsx"))
+	set myNormalizedWorksheet to refer to Worksheet(myExcelFile,"Normalized")
+	set myRequirementHeader to refer to myNormalizedWorksheet.Cell("A1")
+	set myColumnHeaders to refer to myNormalizedWorksheet.CellRange("A1:E1")
+	if myCycle > 5 then
+		LogWarning "Infinite loop..."
+	end if
+end repeat
+
+
+//Tests adding worksheets to a workbook
+AddWorksheets myExcelFile, myNormalizedWorksheet
 
 //Resets tab colors to no colors
 ResetTabColors myExcelFile
@@ -39,9 +58,6 @@ AlphabetizeWorksheets mySortingExcel
 set myHyperlinksExcels to ["PublicAPIs1.xlsx","MacroFileMatching.xlsx"]
 ReturnHyperlinks myHyperlinksExcels
 
-//Tests adding worksheets to a workbook
-AddWorksheets myExcelFile, myNormalizedWorksheet
-
 //Tests patterns of different colors
 set myWorkbookFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 set myWorksheetName to "Canvas"
@@ -65,4 +81,6 @@ set myWorkbookFile to refer to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 set myWorksheet to refer to Worksheet(myWorkbookFile,myNewBordersWorksheetName)
 put ("A1","N1") as a list into myRange
 SetMergeAndAlignment myRange,myWorksheet
+
+Log "My list of errors is"&&myErroredObjectList
 
