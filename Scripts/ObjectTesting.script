@@ -1,0 +1,10 @@
+﻿params myExcelFile,myNormalizedWorksheet,myRequirementHeader,myColumnHeaders
+
+log me.name && "has started."
+
+put "The workbook" && myExcelFile.fileName && "is a workbook:" && (myExcelFile is a workbook)
+put "The worksheet" && myNormalizedWorksheet.Name && "is a worksheet:" && (myNormalizedWorksheet is a worksheet)
+put myRequirementHeader is a cell
+
+set myNotNormalizedWorksheet to refer to Worksheet(myExcelFile,"Not Normalized")
+set the tabColor of myNotNormalizedWorksheet to "blue"

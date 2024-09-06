@@ -8,6 +8,13 @@ set myNormalizedWorksheet to refer to Worksheet(myExcelFile,"Normalized")
 set myNotNormalizedWorksheet to refer to Worksheet(myExcelFile,"Not Normalized")
 put ReturnWorksheetProperties(myNormalizedWorksheet, myNotNormalizedWorksheet)
 
+//Tests passing object references to a handler
+set myRequirementHeader to refer to myNormalizedWorksheet.Cell("A1")
+put myRequirementHeader
+set myColumnHeaders to refer to myNormalizedWorksheet.CellRange("A1:E1")
+put myColumnHeaders
+ObjectTesting myExcelFile,myNormalizedWorksheet,myRequirementHeader,myColumnHeaders
+
 
 //Resets tab colors to no colors
 ResetTabColors myExcelFile
