@@ -2,6 +2,7 @@
 global myCurrentError
 
 set myExcelFile to refer to Workbook(ResourcePath("Test12.xlsx"))
+put myExcelFile.worksheetnames into myWorksheetNames
 
 //Tests new features of accessing Excel data using workbook function
 put ReturnWorkbookProperties(myExcelFile)
