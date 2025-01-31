@@ -2,6 +2,7 @@
 
 Log me.name && "begins."
 Log "There are lots of permutations, so this may take a minute. Please be patient."
+put "The starting number of worksheets of" && myWorkbookFile && "is:"&&myWorkbookFile.worksheetcount
 
 -- set myColorsAndPatternsFile to Workbook(ResourcePath("ColorsAndPatterns.xlsx"))
 put ("B".."R") as a list into myColumns
@@ -35,6 +36,9 @@ repeat with each item myCurrentColumn of myColumns
 	end repeat
 end repeat
 
+put "The ending number of worksheets of" && myWorkbookFile && "is:"&&myWorkbookFile.worksheetcount
+Log me.name && "ends."
+
 Return myNewSheetName
 
-Log me.name && "ends."
+
