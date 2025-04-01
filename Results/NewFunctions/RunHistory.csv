@@ -39,3 +39,4 @@
 2024-08-28 13:46:30.593 -0400,"Failure",0:00:00,2,0,0,"20240828_134630.593/LogFile.txt","","STDatabaseError -- Where clause specifies invalid column name 'RecNumber' (no such column)",2
 2024-08-28 13:46:48.646 -0400,"Aborted",0:01:15,2,0,0,"20240828_134648.646/LogFile.txt","","",2
 2024-08-28 13:50:24.867 -0400,"Failure",0:00:00,1,0,0,"20240828_135024.867/LogFile.txt","","Script Error -- Number of Errors logged: 1",2
+2025-03-21 10:01:23.913 -0400,"Aborted",0:01:15,2,0,0,"20250321_100123.913/LogFile.txt","","",2
