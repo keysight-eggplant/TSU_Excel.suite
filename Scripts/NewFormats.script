@@ -1,14 +1,27 @@
-﻿set myFile to refer to Workbook(ResourcePath("NewFormats.xlsx"))
+﻿params myFile
+
 set myWorksheetName to "NewFormats"
 set myWorksheet to refer to Worksheet(myFile,myWorksheetName)
 put formattedTime("SSSSSS",now) into myPrimaryKey
 put NewWorksheet(myFile,name:"Copied Worksheet_"&&myPrimaryKey,copyFrom:Worksheet(myFile,myWorksheetName),sequenceNumber:2)
 set myCopiedWorksheet to refer to Worksheet(myFile,"Copied Worksheet_"&&myPrimaryKey)
 
-repeat 4 times
+repeat 30 times
 	put repeatindex() into i
 	set myCell to refer to cell(i,1) of myCopiedWorksheet
+	if myCell is empty then exit repeat
+	
 	put myCell into myFormat
 	Log "The format"&&myFormat&&"will be applied"
 	put TRUE into myCell.(myFormat)
+end repeat 
+
+repeat 30 times
+	put repeatindex() into i
+	set myCell to refer to cell(i,2) of myCopiedWorksheet
+	if myCell is empty then exit repeat
+	
+	put myCell into myFormat
+	Log "The format"&&myFormat&&"will be applied"
+	put myFormat into myCell.fontName
 end repeat 
