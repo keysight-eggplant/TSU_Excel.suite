@@ -32,6 +32,7 @@ repeat with each item myCurrentColumn of myColumns
 	repeat with each item myCurrentRow of myRows
 		set myCurrentCell to refer to cell(myCurrentColumn&myCurrentRow) of myWorksheet
 		set the fillPattern of myCurrentCell to "none"
+		set the bold of myCurrentCell to TRUE
 		set the patternForegroundColor of myCurrentCell to "white"
 	end repeat
 end repeat

@@ -51,6 +51,11 @@ SetTabColorsByNumber myExcelFile
 //Returns Tab Colors for worksheets
 ReturnTabColors myExcelFile
 
+//Tests font formats
+set myExcelFile to refer to Workbook(ResourcePath("NewFormats.xlsx"))
+NewFormats myExcelFile
+
+
 //Alphabetizes worksheets by name
 put Workbook(ResourcePath("PublicAPIs1.xlsx")) into mySortingExcel
 AlphabetizeWorksheets mySortingExcel
